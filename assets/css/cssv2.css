@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sankofa+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* HEADER */
+
+
+body {
+    position: relative;
+    background: radial-gradient(circle, #090229, #000000); 
+    color: #fff;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;      
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../../assets/img/zodiaco/bg/bg.png") no-repeat center center;
+    background-size: cover; /* Asegura que la imagen cubra toda el fondo */
+    background-attachment: fixed; /* Fija el fondo en la pantalla */
+    opacity: 0.3;
+    z-index: -1; 
+}
+
+
+header{    
+    display: flex;
+    flex-direction: row;
+    padding: 10px; 
+    color: #fff;   
+}
+
+.logo img{
+    height: 70px;
+    width: 70px;
+}
+
+.title-menu{
+    width: 100%;
+    height: 70px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: 0 5px;
+}
+
+.title{ 
+
+    font-family: "Sankofa Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    text-align: center;
+    
+    letter-spacing: 20px;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0 40px;
+}
+
+.menu ul li {
+    display: inline-block;
+    border-radius: 30px;
+    padding: 10px;
+    transition: background-color 1.5s ease-in-out, border 1.5s ease-in-out; 
+}
+
+.menu ul li:hover {
+    border: #2926387e solid 2pt;
+    background-color: #09052093;
+}
+
+.menu ul li a{
+    color: #fff;
+    text-decoration: none;    
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+
+/* BODY */
+
+main{
+    padding: 10px;
+}
+
+.intro{
+    padding: 20px;
+    height: 85vh;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* background: url("../../assets/img/zodiaco/logov3.png") no-repeat center center;
+    opacity: 0.3; */
+    
+}
+
+.intro h2{
+    font-size: 8vh;
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.intro p{
+    font-size: 2vh;
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+#signo{
+    height: 10vh;
+    text-align: center;
+    font-size: 6vh;
+    font-family: "Sankofa Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 20px;
+}
+
+.horoscopo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px ;    
+}
+
+.img-horoscopo-m{
+    height: 120%;
+    padding: 1vw;
+    margin-top: 10px;    
+    margin-right: 10vw;
+    margin-left: 10vw;
+    border: solid 1px;
+    border-color: #fff;    
+    border-radius: 30px;
+}
+.img-horoscopo {
+    position: relative;
+    display: inline-block;
+    border-radius: 30px; /* Redondea las esquinas */
+    overflow: hidden; /* Asegura que nada sobresalga del contenedor */
+}
+
+.img-horoscopo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 30px; /* Aplica el borde redondeado también a la imagen */
+}
+
+/* Pseudo-elemento para aplicar el efecto de borde con difuminado */
+.img-horoscopo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px; /* Redondea las esquinas */
+    padding: 10px; /* Ancho del borde */
+    background: 
+        radial-gradient(circle at top left, rgba(12, 2, 105, 0.658) 20%, transparent 80%),   /* Esquina superior izquierda con color blanco */
+        radial-gradient(circle at bottom right, rgb(7, 0, 41) 20%, transparent 80%), /* Esquina inferior derecha con color blanco */
+        radial-gradient(circle at top right, transparent 50%, rgba(255, 0, 0, 0) 80%), /* Esquina superior derecha con transparencia */
+        radial-gradient(circle at bottom left, transparent 50%, rgba(255, 0, 0, 0) 80%); /* Esquina inferior izquierda con transparencia */
+    pointer-events: none; /* Para no interferir con la interacción de la imagen */
+    z-index: 1; /* Asegura que el borde esté por encima de la imagen */
+}
+
+.img-horoscopo{
+    border: solid 1px;
+    border-color: #fff;    
+}
+
+.info-horoscopo{
+    width: 100vw;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding: 10px;    
+}
+
+.info-horoscopo h2 {
+    text-align: center;
+    font-family: "Kanit", system-ui;
+    font-weight: 300;
+    font-style: normal;
+}
+.info-horoscopo p{
+    text-align: center;
+    font-family: "Kanit", system-ui;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.consulta-horoscopo{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 10px 0;
+
+    font-family: "Zen Loop", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.consulta-horoscopo h2{
+    text-align: center;
+    font-size: 6vw;
+}
+
+.consulta-horoscopo label {
+    text-align: center;
+    font-size: 2vw;
+}
+.consulta-horoscopo input {
+    text-align: center;
+    font-size: 2vw;
+}
+
+.grid-form{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+}
+
+.input{
+    font-family: "Zen Loop", cursive;
+    padding: 10px 40px;
+    font-weight: 400;
+    font-style: normal;
+    background-color: transparent;
+    color: wheat;
+    border: white solid 1px;
+}
+
+.btn-consulta {
+    font-family: "Zen Loop", cursive;
+    padding: 10px 40px;
+    font-weight: 400;
+    font-style: normal;
+    background-color: transparent;
+    border: solid white 1px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-consulta:hover {
+    transform: scale(1.1);
+    color: wheat;
+}
+.g1{
+    grid-column: 1/4;
+    grid-row: 1;    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+.g2{
+    grid-column: 1/2;
+    grid-row: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}   
+.g3{
+    grid-column: 2/3;
+    grid-row: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.g4{
+    grid-column: 3/4;
+    grid-row: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.g5{
+    grid-column: 1/4;
+    grid-row: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.noticias-cont h2{
+    text-align: center;
+    font-family: "Kanit", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    font-size : 3vw;
+}
+
+.noticias-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.noticias {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Estira las tarjetas para que tengan la misma altura */
+}
+
+.noticia-sub {
+    flex: 1; /* Hace que cada tarjeta ocupe el mismo espacio */
+    margin: 10px;
+    display: flex;
+    flex-direction: column; /* Alinea el contenido de forma vertical */
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noticia-sub img {
+    max-width: 100%;
+    height: auto;
+}
+
+.noticia-sub p {
+    padding: 15px;
+    flex-grow: 1; /* Permite que el párrafo ocupe todo el espacio disponible */
+    text-align: justify;
+    font-family: "Kanit", system-ui;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* FOOTER */
+footer{
+    background-color: #000000;
+    padding: 3vw;
+}
+
+.enlaces{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.enlaces li{    
+    list-style: none;
+    margin-bottom: 10px
+}
+.enlaces a{
+    font-family: "Kanit", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    color: #fff;
+    text-decoration: none;    
+}
+
+/* Declaración de propiedades responsivas*/
+
+@media (max-width: 767px) {
+    header{
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    header .logo{
+        height: 0px;
+        margin: 0;
+        padding: 0;        
+    }
+
+    header .logo img{
+        height: 0px;
+        margin: 0;
+        padding: 0;        
+    }
+
+    .title{
+        margin: 0;
+        padding:0;
+    }
+    .title h1{
+        margin: 0;
+        padding: 0;
+    }
+
+    .title-menu{
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+    .title-menu ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .title-menu ul li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .intro{
+        height: 70vh;
+    }
+    
+    .intro h2{
+        font-size: 5vh;
+    }
+    
+    .intro p{
+        font-size: 2vh;
+        padding: 1%;
+    }
+
+    #signo{
+        text-align: center;
+        font-size: 4vh;
+        font-family: "Sankofa Display", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 10px;
+    }
+    
+
+    .consulta-horoscopo{
+        margin: 0;
+        padding: 0;    
+    }
+    .consulta-horoscopo h2{        
+        font-size: 9vw ;
+    }
+    .consulta-horoscopo label{        
+        font-size: 8vw ;
+    }
+    .consulta-horoscopo input{        
+        font-size: 6vw;
+    }
+
+    .horoscopo{
+        flex-direction: column;
+        margin: 0;
+        margin-bottom: 300px ;
+    }
+
+    .img-horoscopo{
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .img-horoscopo img{
+        width: 100%;
+    }
+
+    .info-horoscopo{
+        margin: 0;
+        padding: 0;
+        margin-top: 2lw;
+    }
+    .info-horoscopo h2{    
+        margin-top: 25px;
+    }
+    .info-horoscopo p{   
+        text-align: center;
+        margin-top: 0 ;        
+        padding: 5px 10px;
+    }
+
+    .input{
+        font-family: "Zen Loop", cursive;
+        padding: 10px 40px;
+        font-weight: 400;
+        font-style: normal;
+        background-color: transparent;
+        color: wheat;
+        border: white solid 1px;
+    }
+    
+    .grid-form{
+        display: block;
+    }
+
+    .grid-form div{
+        margin: 60px 0;
+    }
+
+    .noticias{
+        flex-direction: column;
+    }
+
+    .enlaces{
+        flex-direction: column;
+    }
+}
